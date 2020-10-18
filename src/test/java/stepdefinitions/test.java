@@ -24,7 +24,7 @@ public class test {
         driver.findElement(By.name("q")).submit();
     }
 
-    //Returning first link text to confirm search string
+    //Print search string to confirm google search
     @Then("The page should contain {string}")
     public void Google_page_contains(String text) {
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
