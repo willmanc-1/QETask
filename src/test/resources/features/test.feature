@@ -7,7 +7,7 @@ This feature verifies Google Searches
             When I search for "Flooid"
             Then The page should contain "Flooid"
 
-    Scenario: List 10 top  website that contains the phone number of flooid coventry and validate any website has details other than flooid
+    Scenario: List 10 top websites that contains the phone number of flooid coventry and validate details other than flooid
          Given I navigate to Google home page
                When I search for "Flooid PCMS +44 (0)24 7669 4455"
                Then I return the top ten website for "Flooid PCMS +44 (0)24 7669 4455"
