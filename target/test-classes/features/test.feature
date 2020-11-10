@@ -1,14 +1,15 @@
 @test
-Feature: Google Search
-This feature verifies Google Searches
+Feature: Testing Flooid Search and Validation
+Description: With this feature we want to Confirm the URL and logo are Flooid
 
-   Scenario: Testing that you can enter a search into google and Google will return results
-       Given I navigate to Google home page
-            When I search for "Flooid"
-            Then The page should contain "Flooid"
+Background:
+    Given I navigate to Google home page
+    When I search for "Flooid"
 
-    Scenario: List 10 top  website that contains the phone number of flooid coventry and validate any website has details other than flooid
-         Given I navigate to Google home page
-               When I search for "Flooid PCMS +44 (0)24 7669 4455"
-               Then I return the top ten website for "Flooid PCMS +44 (0)24 7669 4455"
-      
+    Scenario: Testing that the user navigates to the Flooid page
+       Then I navigate to "https://www.flooid.com/"
+       And the URL is flooid.com
+
+    Scenario: Testing that the Flooid Logo is displayed
+       Then I navigate to "https://www.flooid.com/"
+       And I confirm the Flooid Logo is displayed
